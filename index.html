@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Una pregunta especial!</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            overflow: hidden; /* Evita el desplazamiento durante la animación */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ocupa toda la altura de la pantalla */
+        }
+
+        /* Contenedor del girasol */
+        .girasol {
+            font-size: 30em; /* Tamaño gigante */
+            animation: mostrarGirasol 8s ease-in-out forwards;
+        }
+
+        /* Contenedor de la frase */
+        .frase {
+            opacity: 0;
+            text-align: center;
+            animation: aparecerFrase 1s ease-in-out 8s forwards;
+        }
+
+        /* Estilo para "Princesa mía" */
+        .princesa {
+            font-size: 4em;
+            color: #ff6f61;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para "¿Puedo ser tu Valentín?" */
+        .pregunta {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        /* Contenedor de los botones */
+        .botones {
+            display: flex;
+            gap: 20px; /* Espacio entre los botones */
+        }
+
+        /* Estilo para los botones */
+        .boton {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff6f61;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .boton:hover {
+            background-color: #e65a50;
+        }
+
+        /* Estilo para el mensaje final */
+        .mensaje-final {
+            font-size: 3em;
+            color: #ff6f61;
+            display: none; /* Oculto inicialmente */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Girasol gigante -->
+    <div class="girasol">🌻</div>
+
+    <!-- Frase (oculta inicialmente) -->
+    <div class="frase">
+        <div class="princesa">Princesa mía</div>
+        <div class="pregunta">¿Puedo ser tu Valentín?</div>
+        <div class="botones">
+            <button class="boton" onclick="mostrarMensajeFinal()">Sí</button>
+            <button class="boton" onclick="mostrarMensajeFinal()">Sí (no tienes otra opción)</button>
+        </div>
+    </div>
+
+    <!-- Mensaje final (oculto inicialmente) -->
+    <div class="mensaje-final">Gracias Carboncita, Te Amo Demasiado ❤️, nos vemos el 14 de febrero, es una cita!</div>
+
+    <script>
+        // Función para mostrar el mensaje final
+        function mostrarMensajeFinal() {
+            // Oculta el contenedor de la frase
+            document.querySelector('.frase').style.display = 'none';
+
+            // Muestra el mensaje final
+            document.querySelector('.mensaje-final').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
